@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>陳律師聯合事務所 | 專業法律服務</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&family=Noto+Sans+TC:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 導航列（由 components.js 動態載入） -->
+    <div id="nav-placeholder"></div>
+
+    <!-- 主視覺區 -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1 class="hero-title">正義。誠信。<br>使命必達。</h1>
+            <p class="hero-subtitle">為個人與企業提供值得信賴的法律服務。超過20年的執業經驗，全力捍衛您的權益。</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">預約免費諮詢</a>
+                <a href="#services" class="btn btn-secondary">服務項目</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 數據統計（由 script.js 從 data/stats.js 動態載入） -->
+    <section class="stats">
+        <div class="container stats-grid" id="statsGrid">
+            <!-- 統計項目由 JS 動態產生 -->
+        </div>
+    </section>
+
+    <!-- 關於我們（由 script.js 從 data/about.js 動態載入，含輪播圖） -->
+    <section class="about" id="about">
+        <div class="container about-grid">
+            <div class="about-image" id="aboutSlider">
+                <!-- 輪播圖由 JS 動態產生 -->
+            </div>
+            <div class="about-content" id="aboutContent">
+                <!-- 文字內容由 JS 動態產生 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 服務項目（由 script.js 從 data/services.js 動態載入） -->
+    <section class="services" id="services">
+        <div class="container">
+            <span class="section-tag section-tag--center">服務項目</span>
+            <h2 class="section-title section-title--center">我們能為您做什麼</h2>
+            <div class="services-grid" id="servicesGrid">
+                <!-- 服務卡片由 JS 動態產生 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 成功案例（由 script.js 從 data/cases.js 動態載入） -->
+    <section class="cases" id="cases">
+        <div class="container">
+            <span class="section-tag section-tag--center">成功案例</span>
+            <h2 class="section-title section-title--center">我們的實績</h2>
+            <div class="cases-grid" id="casesGrid">
+                <!-- 最新 6 筆案例卡片由 JS 動態產生 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 律師團隊（由 script.js 從 data/lawyers.js 動態載入） -->
+    <section class="team" id="team">
+        <div class="container">
+            <span class="section-tag section-tag--center">律師團隊</span>
+            <h2 class="section-title section-title--center">我們的專業律師</h2>
+            <div class="team-grid" id="teamGrid">
+                <!-- 律師卡片由 JS 動態產生 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 律師彈窗 -->
+    <div class="modal-overlay" id="lawyerModal" aria-hidden="true">
+        <div class="modal" role="dialog" aria-labelledby="modalTitle">
+            <button class="modal-close" aria-label="關閉彈窗">&times;</button>
+            <div class="modal-body">
+                <div class="modal-photo" id="modalPhoto"></div>
+                <h2 class="modal-name" id="modalTitle"></h2>
+                <p class="modal-role" id="modalRole"></p>
+                <div class="modal-details" id="modalDetails"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 聯絡我們（由 script.js 從 data/contact.js 動態載入） -->
+    <section class="contact" id="contact">
+        <div class="container" id="contactSection">
+            <!-- 聯絡資訊由 JS 動態產生 -->
+        </div>
+    </section>
+
+    <!-- 頁尾（由 components.js 動態載入） -->
+    <div id="footer-placeholder"></div>
+
+    <!-- 分享按鈕（固定浮動） -->
+    <div class="share-buttons" id="shareButtons">
+        <button class="share-toggle" id="shareToggle" aria-label="分享此頁面">
+            <span class="share-toggle-icon">↗</span>
+        </button>
+        <div class="share-menu">
+            <a href="#" class="share-btn share-btn--line" id="shareLine" aria-label="分享到 LINE" title="分享到 LINE">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+            </a>
+            <a href="#" class="share-btn share-btn--fb" id="shareFacebook" aria-label="分享到 Facebook" title="分享到 Facebook">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+        </div>
+    </div>
+
+    <script src="data/navigation.js"></script>
+    <script src="components.js"></script>
+    <script src="data/about.js"></script>
+    <script src="data/stats.js"></script>
+    <script src="data/services.js"></script>
+    <script src="data/lawyers.js"></script>
+    <script src="data/cases.js"></script>
+    <script src="data/contact.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

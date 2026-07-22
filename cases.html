@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>成功案例 | 陳律師聯合事務所</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&family=Noto+Sans+TC:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 導航列（由 components.js 動態載入） -->
+    <div id="nav-placeholder"></div>
+
+    <!-- 成功案例完整列表 -->
+    <main class="page-content">
+        <div class="container">
+            <span class="section-tag">成功案例</span>
+            <h1 class="section-title">所有案例</h1>
+            <p class="page-intro">以下為本事務所歷年成功案例紀錄。您可依案件類別篩選，了解我們在各領域的專業表現。</p>
+
+            <div class="cases-filter" id="casesFilter">
+                <!-- 篩選標籤由 JS 動態產生 -->
+            </div>
+            <div class="cases-grid" id="casesAll">
+                <!-- 所有案例由 JS 動態產生 -->
+            </div>
+
+            <div class="disclaimer-back">
+                <a href="index.html" class="btn btn-primary">← 返回首頁</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- 頁尾（由 components.js 動態載入） -->
+    <div id="footer-placeholder"></div>
+
+    <script src="data/navigation.js"></script>
+    <script src="components.js"></script>
+    <script src="data/services.js"></script>
+    <script src="data/cases.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
