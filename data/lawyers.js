@@ -19,7 +19,7 @@ const LAWYERS_DATA = [
     id: "chen",
     name: "陳大偉",
     role: "主持律師",
-    photo: "images/people1.jpeg",
+    photo: "",
     bio: "專精公司法與併購案件，擁有25年豐富執業經驗。",
     education: [
       "國立台灣大學法律學系學士",
